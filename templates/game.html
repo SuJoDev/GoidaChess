@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Главная | GoidaChess{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="game_content">
+      <div id="board" style="width: 400px;"></div>
+    </div>
+  </div>
+  <script>
+    const initialFen = "{{ fen }}";
+  </script>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% endblock %}
